@@ -221,7 +221,7 @@ class TealiumData extends AbstractHelper
         $catProductList = [];
         $browseRefineType = false;
         $browseRefineValue = false;
-        $manufacturer = false;
+        $manufacturer = [];
         $ItemsQty = false;
         $GrandTotal = false;
 
@@ -760,7 +760,7 @@ class TealiumData extends AbstractHelper
 		$productImage = false;
 		$productUrl = false;
 		$categoryName = false;
-		$manufacturer = false;
+		$manufacturer = [];
 		$parentCatName = false;
 		
         if ($this->_objectManager->get('Magento\Customer\Model\Session')->isLoggedIn()) {

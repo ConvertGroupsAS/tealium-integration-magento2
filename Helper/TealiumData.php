@@ -218,7 +218,7 @@ class TealiumData extends AbstractHelper
         $subcategory = false;
 		$categoryId =  false;
 		$category_name =  false;
-        $catProductList = false;
+        $catProductList = [];
         $browseRefineType = false;
         $browseRefineValue = false;
         $manufacturer = false;
@@ -354,7 +354,7 @@ class TealiumData extends AbstractHelper
     {
         $categoryId =  false;
         $category_name =  false;
-        $catProductList = false;
+        $catProductList = [];
         $ItemsQty = false;
 		$GrandTotal = false;
         $store = $this->store;

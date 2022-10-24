@@ -360,8 +360,8 @@ class TealiumData extends AbstractHelper
         $store = $this->store;
         $page = $this->page;
 		$subcategory = false;
-		$parentCatName = false;
-		$categoryName = false;
+		$parentCatName = [];
+		$categoryName = [];
 		
         $_product = $this->_registry->registry('current_product');
 
@@ -545,21 +545,21 @@ class TealiumData extends AbstractHelper
         $store = $this->store;
         $page = $this->page;
 
-        $checkout_ids = false;
-        $checkout_skus = false;
-        $checkout_names = false;
-        $checkout_qtys = false;
-        $checkout_prices = false;
-        $checkout_original_prices = false;
+        $checkout_ids = [];
+        $checkout_skus = [];
+        $checkout_names = [];
+        $checkout_qtys = [];
+        $checkout_prices = [];
+        $checkout_original_prices = [];
         $checkout_brands = [];
-		$categoryName = false;
+        $categoryName = [];
 		$GrandTotal = false;
 		$ItemsQty = false;
-		$checkout_images = false;
-		$checkout_url = false;
-		$checkout_catId = false;
-		$parentCatName = false; 
-		$itemDiscountAmmount = false;
+		$checkout_images = [];
+		$checkout_url = [];
+		$checkout_catId = [];
+		$parentCatName = [];
+		$itemDiscountAmmount = [];
 		$product_promo_code = false;
 		
 		$outputArray = [];
@@ -759,9 +759,9 @@ class TealiumData extends AbstractHelper
         $discount_quantity = false;
 		$productImage = false;
 		$productUrl = false;
-		$categoryName = false;
+		$categoryName = [];
 		$manufacturer = [];
-		$parentCatName = false;
+		$parentCatName = [];
 		
         if ($this->_objectManager->get('Magento\Customer\Model\Session')->isLoggedIn()) {
             $customer = $this->_objectManager->get('Magento\Customer\Model\Session')->getCustomer();

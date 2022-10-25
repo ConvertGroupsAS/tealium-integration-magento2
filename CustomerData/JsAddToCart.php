@@ -28,7 +28,7 @@ class JsAddToCart implements SectionSourceInterface
 
     public function getSectionData()
     {
-		$productImage = false;
+		$productImage = [];
         $product_id=$this->_customerSession->getTealiumAddProductId();
         $this->_customerSession->unsTealiumAddProductId();
 

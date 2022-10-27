@@ -824,7 +824,7 @@ class TealiumData extends AbstractHelper
                 $discount =
                     number_format((float)$item->getDiscountAmount(), 2, ".", "");
                 $discounts[] = $discount;
-                $applied_rules = explode(",", $item->getAppliedRuleIds());
+                $applied_rules = explode(",", (string)$item->getAppliedRuleIds());
                 $discount_object = [];
                 $brands[] = $item->getProduct()->getBrand();
                 foreach ($applied_rules as $rule) {

@@ -51,7 +51,7 @@ class JsAddToCart implements SectionSourceInterface
 				$CartId[] = 	$item->getProductId();
 				$CartSku[] = 	$item->getSku();
 				$CartQty[] = 	$item->getQty();
-				$CartPrice[] =	number_format($item->getPrice(), 2, '.', '');
+				$CartPrice[] =	number_format((float)$item->getPrice(), 2, '.', '');
 				
 				$productCat = $objectManager->create('Magento\Catalog\Model\Product')->load($item->getProductId());
 				$productImage[] = $mediaUrl.$productCat->getImage();

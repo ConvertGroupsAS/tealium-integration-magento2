@@ -20,9 +20,9 @@ $customData["product_brand"] = $_product->getBrand();
 $customData["product_category"] =
     $_category ? $_category->getName() : 'no_category';
 $customData["product_unit_price"] =
-    number_format($_product->getSpecialPrice() ? : "0.00", 2, ".", '');
+    number_format((float)$_product->getSpecialPrice() ? : "0.00", 2, ".", '');
 $customData["product_list_price"] =
-    number_format($_product->getPrice()? : "0.00", 2, ".", '');
+    number_format((float)$_product->getPrice()? : "0.00", 2, ".", '');
 
 // create a tealium object for the page
 $tealium = $helper->init($store, $this, "ProductPage")
